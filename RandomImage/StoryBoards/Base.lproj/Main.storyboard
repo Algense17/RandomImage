@@ -38,7 +38,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Random Image" id="zob-zu-HdW">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.trianglehead.clockwise" catalog="system" id="KIC-f9-1fK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.clockwise" catalog="system" id="KIC-f9-1fK">
                             <connections>
                                 <action selector="refreshButton" destination="BYZ-38-t0r" id="sHn-Lh-hk1"/>
                             </connections>
@@ -46,11 +46,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="0zy-AV-yZs" id="IbB-Qi-RLn"/>
+                        <outlet property="searchBar" destination="cL7-kI-k4V" id="FeC-Zm-ucE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056.8" y="-28.335832083958024"/>
+            <point key="canvasLocation" x="935" y="-28"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WKe-CV-ogh">
@@ -72,7 +73,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.trianglehead.clockwise" catalog="system" width="119" height="128"/>
+        <image name="arrow.clockwise" catalog="system" width="110" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
