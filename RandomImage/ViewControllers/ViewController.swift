@@ -72,15 +72,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
                         print("Invalid response")
                         return
                     }
-
                     switch httpResponse.statusCode {
-
                     case 403:
                         print("\(httpResponse.statusCode): No Results")
-                
                     case 404:
                         print("\(httpResponse.statusCode): Page not found")
-                   
                     default:
                         print("Unexpected status code: \(httpResponse.statusCode)")
                     }
