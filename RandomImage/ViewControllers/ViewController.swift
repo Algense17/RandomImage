@@ -62,13 +62,28 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 return
             }
             
-            print(response)
-            
             DispatchQueue.main.async { [weak self] in
                 guard let self else { return }
                 imageView.image = UIImage(data: data)
                 contentUnavailableConfiguration = nil
             }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                        print("Invalid response")
+                        return
+                    }
+
+                    switch httpResponse.statusCode {
+
+                    case 403:
+                        print("\(httpResponse.statusCode): No Results")
+                
+                    case 404:
+                        print("\(httpResponse.statusCode): Page not found")
+                   
+                    default:
+                        print("Unexpected status code: \(httpResponse.statusCode)")
+                    }
         }.resume()
         
         searchBar.resignFirstResponder()
